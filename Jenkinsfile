@@ -1,8 +1,7 @@
 pipeline {
-    
     agent any
-    triggers{
-    pollSCM('* * * * *')
+    triggers {
+        pollSCM('* * * * *')
     }
     stages {
         stage('VCS') {
@@ -17,7 +16,7 @@ pipeline {
         }
         stage('push image to registry') {
             steps {
-                sh 'docker push aegonn/saleor-dashboard:DEV'
+                sh 'docker image push aegonn/saleor-dashboard:DEV'
             }
         }
     }
