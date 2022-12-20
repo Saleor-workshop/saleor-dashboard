@@ -1,7 +1,7 @@
 ---
   # where to run the ci/cd pipeline
   pool:
-    vmImage: ubuntu-20.04
+    vmImage: ubuntu-22.04
 
   # when to run
   trigger:
